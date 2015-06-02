@@ -33,14 +33,15 @@
   <gap:plugin name="org.apache.cordova.network-information"/>
   <gap:plugin name="org.apache.cordova.splashscreen"/>
   <gap:plugin name="org.apache.cordova.vibration"/>
-<icon src="hd.png"/>
-<icon src="low.png" gap:platform="android" gap:qualifier="ldpi" />
-<icon src="low.png" gap:platform="android" gap:qualifier="mdpi" />
-<icon src="hd.png" gap:platform="android" gap:qualifier="hdpi" />
-<icon src="hd.png" gap:platform="android" gap:qualifier="xhdpi" />
+<icon src="xhd.png"/>
+<icon src="hd.png" gap:platform="android" gap:qualifier="ldpi" />
+<icon src="xhd.png" gap:platform="android" gap:qualifier="mdpi" />
+<icon src="xhd.png" gap:platform="android" gap:qualifier="hdpi" />
+<icon src="xhd.png" gap:platform="android" gap:qualifier="xhdpi" />
 <icon src="xhd.png" gap:platform="android" gap:qualifier="xxhdpi" />
 <icon src="xhd.png" gap:platform="android" gap:qualifier="fr-xxhdpi" />
 <gap:splash src="splash.png" />
 <gap:platform name="android" />
+<preference name="splash-screen-duration" value="100"/>
   <access origin="*"/>
 </widget>

@@ -1,7 +1,7 @@
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="in.madari.video" version="1.0.0">
-  <name>Video Madari</name>
-  <description>A beautiful Video Downloader</description>
-  <author href="http://avadheshb.com" email="hi@avadheshb.com">PhoneGap Team</author>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.lyricsnext.app" version="1.0.0">
+  <name>LyricsNext</name>
+  <description>Hindi Songs Lyrics</description>
+  <author href="http://avadheshb.com" email="hi@avadheshb.com">Avadhesh</author>
   <content src="index.html"/>
   <preference name="permissions" value="none"/>
   <preference name="phonegap-version" value="3.5.0"/>
@@ -19,11 +19,7 @@
   <preference name="disable-cursor" value="false"/>
   <preference name="android-minSdkVersion" value="7"/>
   <preference name="android-installLocation" value="auto"/>
-  <gap:plugin name="org.apache.cordova.battery-status"/>
-  <gap:plugin name="org.apache.cordova.camera"/>
-  <gap:plugin name="org.apache.cordova.media-capture"/>
   <gap:plugin name="org.apache.cordova.console"/>
-  <gap:plugin name="org.apache.cordova.contacts"/>
   <gap:plugin name="org.apache.cordova.device"/>
   <gap:plugin name="org.apache.cordova.inappbrowser" />
   <gap:plugin name="org.apache.cordova.device-motion"/>
@@ -37,7 +33,14 @@
   <gap:plugin name="org.apache.cordova.network-information"/>
   <gap:plugin name="org.apache.cordova.splashscreen"/>
   <gap:plugin name="org.apache.cordova.vibration"/>
-  <icon src="icon.png"/>
-  <gap:platform name="android" />
+<icon src="hd.png"/>
+<icon src="low.png" gap:platform="android" gap:qualifier="ldpi" />
+<icon src="low.png" gap:platform="android" gap:qualifier="mdpi" />
+<icon src="hd.png" gap:platform="android" gap:qualifier="hdpi" />
+<icon src="hd.png" gap:platform="android" gap:qualifier="xhdpi" />
+<icon src="xhd.png" gap:platform="android" gap:qualifier="xxhdpi" />
+<icon src="xhd.png" gap:platform="android" gap:qualifier="fr-xxhdpi" />
+<gap:splash src="splash.png" />
+<gap:platform name="android" />
   <access origin="*"/>
 </widget>

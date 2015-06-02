@@ -1,92 +1,44 @@
-<html><head><title>LyricsNext</title><meta name="viewport" content="width=device-width, 
-
-initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0" />
+﻿<html><head><title>LyricsNext</title><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0" />
 </head>
-<link 
-
-rel="stylesheet" href="http://pricepur.com/LNAPP/so.css"/>
+<link rel="stylesheet" href="http://pricepur.com/LNAPP/so.css"/>
 <body>
     
-<script 
-
-src="phonegap.js"></script>
-<script 
-
-src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" 
-
-type="text/javascript"></script>
-
-<script>if(navigator.connection.type==0)
-{
-    alert('This application requires internet. Please connect to the internet.');
-
-}
-else if(navigator.connection.type=='none')
-{
-    alert('This application requires internet. Please connect to the internet.');
-
-}
-else
-{
-    //Hurray I'm online
-}</script>
-
+<script src="phonegap.js"></script>
+<script src="jqu.js" type="text/javascript"></script>
 
 <body data-initial-url="http://pricepur.com/LNAPP/home.php" onload=" 
 
-runEffect();" 
-
-onhashchange="badal('url');">
+runEffect();" onhashchange="badal('url');">
 <div id="splash" 
 
 style="width:100%;height:100%;position:fixed;top:0;left:0;right:0;bottom:0;text-
 
-align:center;background:white;"><img src="http://www.lyricsnext.com/lyricsnext-
-
-apple.png" style="margin-top:10%;"/>
+align:center;background:white;z-index: 10;text-align: CENTER;"><img src="/splash.png" style="margin-top:10%;"/>
 <br/>
-<img 
-
-src="http://pricepur.com/LNAPP/loader.gif"/>
+<img src="http://pricepur.com/LNAPP/loader.gif" onerror="this.onerror=null;this.src='noint.png';"/>
 </div>
-<div id="loader"><img 
-
-src="http://pricepur.com/LNAPP/loader.gif"/></div>
+<div id="loader"><img src="http://pricepur.com/LNAPP/loader.gif" onerror="/></div>
 <div id="plus"></div>
 
     <script>
   
-    
-
-function lage(url){
+    function lage(url){
       $.get(url, function(data) {
         $('#plus').html(data);
-       
-
- $('#loader').slideUp();
+        $('#loader').slideUp();
         $('#splash').hide();
         
       });
     }
-    var 
-
-initialUrl = $('body').data('initialUrl');
+    var initialUrl = $('body').data('initialUrl');
     lage(initialUrl);
-window.location.hash = 
-
-initialUrl;
+window.location.hash = initialUrl;
 $('body').on('click', 'a[href]', function (e) {
-      var url = 
-
-$(e.currentTarget).attr('href');
+      var url = $(e.currentTarget).attr('href');
      $('#loader').slideDown();
-     
+     window.history.pushState("object or string", "Title", 
 
-window.history.pushState("object or string", "Title", 
-
-'#http://pricepur.com/LNAPP/'+url
-
-+'');
+'#http://pricepur.com/LNAPP/'+url+'');
  e.preventDefault();
  badal();
   });
@@ -94,36 +46,50 @@ window.history.pushState("object or string", "Title",
 
 
   $('body').on('submit', 'form', function (e) {
-   
-
-   var url = $('#sps').val();
+      var url = $('#sps').val();
    $('#loader').slideDown();
-       
-
-window.history.pushState("object or string", "Title", 
+       window.history.pushState("object or string", "Title", 
 
 '#http://pricepur.com/LNAPP/search.php?p='+url+'');
 badal();
 return false;    
-}).trigger
-
-('hashchange');
+}).trigger('hashchange');
 
 
 </script>
 
 <script language="javascript" type="text/javascript">
     
-  
-
-function badal(url){
+  function badal(url){
                lage(location.hash.substr(1));
               
-          
-
-     }
+               }
                 
- </script></div></body></html>
+ </script></div>
+
+
+
+
+
+<script>if(navigator.connection.type==0)
+{
+    document.write('<int>This application requires internet. Please connect to the internet.</int>');
+
+}
+else if(navigator.connection.type=='none')
+{
+    document.write('<int>This application requires internet. Please connect to the internet.</int>');
+
+}
+else
+{
+    
+}</script>
+
+
+
+
+</body></html>
 
 
 

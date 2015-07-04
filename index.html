@@ -13,12 +13,15 @@ runEffect();" onhashchange="badal('url');">
 
 style="width:100%;height:100%;position:fixed;top:0;left:0;right:0;bottom:0;text-
 
-align:center;background:white;z-index: 10;text-align: CENTER;"><img src="logo.png" style="margin-top:10%;"/>
+align:center;background:white;z-index: 10;text-align: CENTER;">
 <br/>
-<img src="http://pricepur.com/LNAPP/loader.gif" onerror="this.src='noint.png';"/>
-
+<img src="http://pricepur.com/LNAPP/loader.gif" onerror="this.src='noint.png';" style="
+    margin-top: 15%;
+"/>
+<br/>
+<div id="nins" style="display:none;"><small>Taking too long? make sure you have intenet connecation cctive!</small></div>
 </div>
-<div id="loader"><img src="http://pricepur.com/LNAPP/loader.gif"></div>
+<div id="loader" style="z-index:9;"><img src="http://pricepur.com/LNAPP/loader.gif"></div>
 
 <div id="plus"></div>
 
@@ -73,20 +76,9 @@ return false;
 
 
 
-<script>if(navigator.connection.type==0)
-{
-    document.write('<int>This application requires internet. Please connect to the internet.</int>');
-
-}
-else if(navigator.connection.type=='none')
-{
-    document.write('<int>This application requires internet. Please connect to the internet.</int>');
-
-}
-else
-{
-    
-}</script>
+<script>
+$('#nins').delay(3000).fadeIn(1000);
+</script>
 
 
 

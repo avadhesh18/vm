@@ -1,11 +1,11 @@
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.lyricsnext.app" version="1.0.0">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.lyricsnext.app" version="1.0.0"  versionCode = "10">
   <name>LyricsNext</name>
   <description>Hindi Songs Lyrics</description>
   <author href="http://avadheshb.com" email="hi@avadheshb.com">Avadhesh</author>
   <content src="index.html"/>
   <preference name="permissions" value="none"/>
   <preference name="phonegap-version" value="3.5.0"/>
-  <preference name="orientation" value="potrait"/>
+  <preference name="orientation" value="portrait"/>
   <preference name="target-device" value="universal"/>
   <preference name="fullscreen" value="false"/>
   <preference name="webviewbounce" value="true"/>
@@ -35,6 +35,6 @@
 <gap:splash src="splash.png" />
 <gap:platform name="android" />
 	
-<preference name="SplashScreenDelay" value="100" />
+<preference name="SplashScreenDelay" value="600" />
   <access origin="*"/>
 </widget>
